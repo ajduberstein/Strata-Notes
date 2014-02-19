@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>Strata Jargonator</title></head>
+<body style="color:red;margin-left:20px;font-size:42pt;font-family:Arial, Sans-Serif">
+  <p style="text-align:center"><h1 style="text-shadow:0.1em 0.1em gray;text-align:center">Strata </br> Jargonator</h1></p>
+  <p align="center";>
+    <button onclick="makeCompanyName()">Company name</button>
+    <button onclick="makeSentence()">Company mission statement</button>
+    <button onclick="makePhrase()">Pitch deck phrases</button>
+  </p>
+<p id="content"></p>
+
+<script type="text/javascript">
+function makeSentence(){
+var a = ["Leveraging our award-winning opensource platform", "Using behavioral science","Leveraging big data solutions", "Offering end-to-end solutions"]
+var name1 = ["Cat","Cloud","Chimp","Toucan","Map","Reduce","Elephant","Camel","Tri","Rhino","Couch","Layer"]
+var name2 = ["DB","Info","Hadoop","Point","Face","Bird","Data","Byte","SQL","Link","Logic"]
+var b = ["to turn data into insight", "to tailor recommendations to your customer", "to personalize the user experience", "to align processes and roles", "to align systems and data"]
+var c = ["delivers client solutions", "transforms the cloud", "analyzes big data", "delivers value", "adds value", "leverages customer data", "utilizes analysis", "optimizes against risk"]
+var d = ["measurable value", "data science", "in-memory data processing", "data insights", "real-time maximum value"]
+document.getElementById("content").innerHTML = "<em>" + a[Math.floor(Math.random()*a.length)] + " " + b[Math.floor(Math.random()*b.length)] + ", " 
++ name1[Math.floor(Math.random()*name1.length)]+ name2[Math.floor(Math.random()*name2.length)] + " "
++ c[Math.floor(Math.random()*c.length)] + " and " + d[Math.floor(Math.random()*d.length)] + "</em>"
+}
+function makePhrase(){
+var e = ["schema-less", "unstructured", "ANSI-compliant", "innovative", "customer-focused", "behavioral", "cloud-connected", "crowd-sourced"]
+var f = ["data-driven", "low-level", "integrated", "Hadoop-powered", "personalized", "data-wrangling", "inspired"]
+var g = ["user experience", "user interface", "munging tool", "scale","cluster management plaform", "science", "organization", "innovation", "solutions", "parallel database", "decision-making"]
+document.getElementById("content").innerHTML = "<em>" + e[Math.floor(Math.random()*e.length)] + " " + f[Math.floor(Math.random()*f.length)] + " " + g[Math.floor(Math.random()*g.length)] + "</em>"
+}
+function makeCompanyName(){
+var e = ["Cat","Cloud","Map","Reduce","Elephant","Camel","Tri","Rhino","Couch","Layer"]
+var f = ["DB","Hadoop","Point","Face","Bird","Data","Byte","SQL","Link","Logic"]
+document.getElementById("content").innerHTML = "<em>" + e[Math.floor(Math.random()*e.length)] + f[Math.floor(Math.random()*f.length)] + "</em>"
+}
+</script>
+</body> 
+</html>
